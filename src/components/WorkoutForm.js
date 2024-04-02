@@ -19,15 +19,11 @@ const WorkoutForm = () => {
             return 
         }
 
-        /* const Workout={title,reps,load} */
+        const Workout={title,reps,load}
 
         const response = await fetch('https://workout-app-backend-dun.vercel.app/api/workouts/',{
             method : 'POST',
-            body : JSON.stringify({
-                title,
-                reps,
-                load
-            }),
+            body : JSON.stringify(Workout),
             headers :{
                 'Content-Type' : 'application/json',
                 'Authorization':`Bearer ${user.token}`
