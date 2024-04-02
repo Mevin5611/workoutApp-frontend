@@ -12,7 +12,7 @@ const Signup = ()=>{
 
     return(
         <form className='signup' onSubmit={hadlesubmit}>
-            <h3>Create Admin</h3>
+            <h3 className='text-[18px] font-bold pb-3'>Create Admin</h3>
 
             <label>Email:</label>
             <input 

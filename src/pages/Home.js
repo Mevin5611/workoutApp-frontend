@@ -31,13 +31,15 @@ const Home = () => {
 
     })
     return (
-        <div className="home">
-            <div className="workouts">
+        <div className="md:grid md:gap-[100px] md:grid-cols-12">
+            <div className="workouts md:col-span-8">
                 {workouts && workouts.map((Workout) => (
                     <WorkoutDetails Workout={Workout} key={Workout._id} />
                 ))}
             </div>
+            <div className='col-span-4'> 
             <WorkoutForm />
+            </div>
         </div>
     )
 }

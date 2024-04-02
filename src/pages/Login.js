@@ -14,7 +14,7 @@ const Login = ()=>{
 
     return(
         <form className='login' onSubmit={hadlesubmit}>
-            <h3>Login</h3>
+            <h3 className='text-[18px] font-bold pb-3'>Login</h3>
 
             <label>Email:</label>
             <input 
@@ -29,7 +29,7 @@ const Login = ()=>{
             value={password}
             />
             <button disabled={isLoading}>Log in</button>
-            <p>don't have an Account <Link to='/signup'>Register</Link></p>
+            <p className='pt-3'>don't have an Account <Link className='text-blue-500' to='/signup'>Register</Link></p>
             {error && <div className='error'>{error}</div>}
         </form>
     )

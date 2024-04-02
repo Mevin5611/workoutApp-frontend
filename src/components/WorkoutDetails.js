@@ -1,6 +1,6 @@
 import React from 'react'
 import {useWorkoutContext} from '../hooks/useWOrkoutContext'
-import {formatDistance} from 'date-fns'
+import {format} from  'timeago.js'
 import { useAuthContext } from '../hooks/useAuthContext'
 
 
@@ -25,11 +25,13 @@ const {user}=useAuthContext()
   }
   return (
     <div className="workout-details">
-        <h4>{Workout.title}</h4>
+        <h4 className='text-[18px] font-bold pb-3'>{Workout.title}</h4>
         <p><strong>Reps :</strong>{Workout.reps}</p>
         <p><strong>Load :</strong>{Workout.load}</p>
-        <p>{Workout.createdAt}</p>
-        <span className= "material-symbols-outlined" onClick={handleClick}>delete</span>
+        <p>{format(Workout.createdAt)}</p>
+        <div className='flex justify-end'>
+        <button className= "bg-red-100 p-1 rounded-md text-red-600" onClick={handleClick}>delete</button>
+        </div>
     </div>
   )
 }
